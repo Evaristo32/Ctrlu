@@ -1,0 +1,29 @@
+spring:
+   application:
+      name: Controle de Usuarios
+   server:
+   port: 9090
+   datasource:
+      driverClassName: org.postgresql.Driver
+      url: jdbc:postgresql://localhost:5432/ctrlu
+      username: docker
+      password: docker
+      database: postgres
+   jpa:
+      database: POSTGRESQL
+      hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          show_sql: true
+          hbm2ddl:
+              auto: update
+      properties:
+          hibernate:
+              temp:
+                  use_jdbc_metadata_defaults: false
+          database:
+              platform: org.hibernate.dialect.PostgreSQL9Dialect
+
+elasticsearch:
+   host: localhost
+   port: 9300
+   clustername: "docker-cluster"
